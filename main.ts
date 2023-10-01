@@ -1,12 +1,14 @@
 /* 
 Thermometer:
    uses the default digital meter to show the current microbit temperature
-   (constrained to the range 0 degrees to 99 degrees):
+   (constrained to the range 0 degrees to 99 degrees)
+
 Clicker:
    A simple use of the default digital meter lets you count things up
    (with Button A) and down(with Button B).  Possibly useful for counting
    people at an event; or cars in a carpark; or even in sheep in a pen, 
    though the limit is 99.
+
 Bangometer:
   This example monitors jolts and knocks using the Spiral indicator.
   The wound-up size of the display shows the strength of each bang
@@ -18,18 +20,22 @@ Compass:
   (should) always point North.Note that the dial uses a reversed scale 
   counting from 360 degrees down to zero. (You will first have to tilt the screen 
   as instructed to initialise the magnetometer)
+
 Noise Meter:
   The following code uses the Bar style to show peak noise levels, sampled 
   four times a second.The signal uses a rolling average, so gradually dies away 
   over time. If it's too loud the indicator will flash to show a range error.
+
 Water Spill:
   This example uses the Tidal indicator to simulate spilling water from the 
   bottom left to the top right as you tilt the microbit. A half-second animation 
   delay makes the movement smoother.
+
 Plumb-line:
   Another use of the accelerometer maps the Pitch rotation(displaced by a 
   right-angle) onto the Dial indicator, with a reversed range, so that the 
   needle always hangs downwards.
+  
 Lie-detector
   This final example uses the Needle indicator to monitor the capacitive input
   on Pin2 of the microbit. The signal is a rolling average, and despite 
@@ -159,6 +165,8 @@ basic.forever(function () {
             updateTest(choice);
         };
         // turning it over halts current test
+        meter.reset();
+        music.tonePlayable(Note.C, music.beat(BeatFraction.Sixteenth))
         choosing = true;
     }
 });
