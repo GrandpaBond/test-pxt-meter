@@ -8,8 +8,8 @@
         "pxt-meters": "github:grandpabond/pxt-meters#master"
     },
     "files": [
-        "main.ts",
-        "README.md"
+        "README.md",
+        "main.ts"
     ],
     "testFiles": [],
     "targetVersions": {
